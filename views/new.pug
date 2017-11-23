@@ -1,0 +1,28 @@
+h1 New Product
+form(action='/products/new', method='POST')
+	h4 Add a new product:
+	label Name: 
+	input(name='name' placeholder='eg. New backpack')
+	br
+	label Description:
+	input(name='description' placeholder='eg. Black backpack')
+	br
+	label Price:
+	input(name='price' placeholder='eg. 29.99')
+	br
+	input(type='submit')
+
+h1 All Products:
+table
+	tr
+		th Name
+		th Description
+		th Price
+		th Action
+	each product in Products
+		tr
+			td= product.name
+			td= product.description
+			td= product.price
+			td 
+				a(href='/products/delete/' + product._id) Delete

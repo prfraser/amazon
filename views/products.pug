@@ -1,0 +1,12 @@
+h1 All Products:
+table
+		tr
+			th Name
+			th Description
+			th Price
+		each product in products
+			tr
+				td= product.name
+				td= product.description
+				td= product.price
+p= counter.pageCount
